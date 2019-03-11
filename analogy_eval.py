@@ -61,7 +61,7 @@ def main(vfile):
             if sec:
                 print(sec, sections[sec])
             sec = d[2:]
-            sections[sec] = {"not_found":0, "total":0, "correct":0}
+            sections[sec] = {"total":0, "not_found":0, "correct":0}
             continue
         sections[sec]["total"] += 1
         l = d.strip().split(' ')

@@ -8,10 +8,13 @@ from copy import copy
 # from nltk.corpus import reuters
 import random
 import pickle
+import sys
 
-# text = ["ASIAN", "EXPORTERS", "FEAR", "DAMAGE", "FROM", "U", ".", "S", ".-", "JAPAN", "RIFT", "Mounting", "trade", "friction", "between", "the", "U", ".", "S", ".", "And", "Japan", "has", "raised", "fears", "among", "many", "of", "Asia", "'", "s", "exporting", "nations", "that", "the", "row", "could", "inflict", "far", "-", "reaching", "economic", "damage", ",", "businessmen", "and", "officials", "said", ".", "They", "told", "Reuter", "correspondents", "in", "Asian", "capitals", "a", "U", ".", "S", ".", "Move", "against", "Japan", "might", "boost", "protectionist", "sentiment", "in", "the", "U", ".", "S", ".", "And", "lead", "to", "curbs", "on", "American", "imports", "of", "their", "products", ".", "But", "some", "exporters", "said", "that", "while", "the", "conflict", "would", "hurt", "them", "in", "the", "long"]
+if len(sys.argv) < 2:
+    print("Error: No input file")
+    exit(0)
 
-f = open('reuters_train.pkl', 'rb')
+f = open(sys.argv[1], 'rb')
 training_words = pickle.load(f)
 f.close()
 
@@ -55,15 +58,9 @@ def processed_corpus(sentence):
     index_corpus = []
     # for sentence in sentences:
     for word in sentence:
-        if is_number(word):
-            text_corpus.append(NUM_token)
-            index_corpus.append(word_2_index[NUM_token])
-        elif word.lower() in VOCABULARY:
+        if word.lower() in VOCABULARY:
             text_corpus.append(word.lower())
             index_corpus.append(word_2_index[word.lower()])
-        else:
-            text_corpus.append(UNK_token)
-            index_corpus.append(word_2_index[UNK_token])
     return text_corpus, index_corpus, len(text_corpus)
 
 training_text_corpus, training_index_corpus, training_corpus_size = processed_corpus(training_words)
