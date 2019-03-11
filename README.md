@@ -22,7 +22,7 @@ Train:<br/>
 &nbsp;&nbsp;&nbsp; `python w2v_np.py reuters_processed_train.pkl`
 
 Embedding file is created after the process. Each line in the embedding file contain a word and its vector components, all space seperated.<br/>
-eg  the 0.756 2.484 0.0345 ...
+eg: &nbsp;the 0.756 2.484 0.0345 ...
 
 Test:<br/>
 for simplex999:<br/>
