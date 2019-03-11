@@ -161,10 +161,10 @@ for epoch in range(num_epochs):
         if (data_index/batch_size) % 10 == 0:
             print('Loss at epoch {}, step {}: Training Loss:{}'.format(epoch, data_index/batch_size, batch_loss/len(words)))
 
-    f = open('Embeddings'+str(epoch)+'.txt', 'w')
-    for each in VOCABULARY:
-        print(each, end=' ', file=f)
-        for e in W_target[word_2_index[each]]:
-            print(e, end=' ', file=f)
-        print(file=f)
-    f.close()
+f = open('Embeddings'+str(epoch)+'.txt', 'w')
+for each in VOCABULARY:
+    print(each, end=' ', file=f)
+    for e in W_target[word_2_index[each]]:
+        print(e, end=' ', file=f)
+    print(file=f)
+f.close()
