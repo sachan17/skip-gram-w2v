@@ -4,9 +4,9 @@ Skip gram implementation of word-2-vector for NLU Assignment 1.
 In this implementation, reuters data is stored in the pickle file.
 
 Data files:
-reuters_train.pkl
-reuters_test.pkl
-reuters_processed_train.pkl
+reuters_train.pkl\n
+reuters_test.pkl\n
+reuters_processed_train.pkl\n
 
 Evaluation files:
 EN-SIMLEX-999.txt = simplex99 similiarity file
