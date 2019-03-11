@@ -26,8 +26,8 @@ eg  the 0.756 2.484 0.0345 ...
 
 Test:<br/>
 for simplex999:<br/>
-&nbsp;&nbsp;&nbsp;`python wordsim.py Embeddings_3_0.03.txt EN-SIMLEX-999.txt<br/>`
+&nbsp;&nbsp;&nbsp;`python wordsim.py Embeddings_3_0.03.txt EN-SIMLEX-999.txt`<br/>
 for Analogy task: <br/>
-&nbsp;&nbsp;&nbsp;`python analogy_eval.py Embeddings_3_0.03.txt` 
+&nbsp;&nbsp;&nbsp;`python analogy_eval.py Embeddings_3_0.03.txt`
 
 To use embedding for downstream task, use read_write.py
