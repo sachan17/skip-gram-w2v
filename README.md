@@ -3,25 +3,25 @@ Skip gram implementation of word-2-vector for NLU Assignment 1.
 
 In this implementation, reuters data is stored in the pickle file.
 
-Data files:
-reuters_train.pkl\n
-reuters_test.pkl\n
-reuters_processed_train.pkl\n
+Data files:<br/>
+reuters_train.pkl<br/>
+reuters_test.pkl<br/>
+reuters_processed_train.pkl<br/>
 
-Evaluation files:
-EN-SIMLEX-999.txt = simplex99 similiarity file
-question-words.txt = data for Analogy Task
+Evaluation files:<br/>
+EN-SIMLEX-999.txt = simplex99 similiarity file<br/>
+question-words.txt = data for Analogy Task<br/>
 
-Code files:
-garbage.txt = contains some garbage text which is removed during preprocessing step
-preprocess.py = preprocessing code
-w2v_np = model training code
-wordsim.py, ranking.py, read_write = code to calculate correlation coefficient, directly picked up from https://github.com/mfaruqui/eval-word-vectors
+Code files:<br/>
+garbage.txt = contains some garbage text which is removed during preprocessing step<br/>
+preprocess.py = preprocessing code<br/>
+w2v_np = model training code<br/>
+wordsim.py, ranking.py, read_write = code to calculate correlation coefficient, directly picked up from https://github.com/mfaruqui/eval-word-vectors<br/>
 
-Train:
+Train:<br/>
    python w2v_np.py reuters_processed_train.pkl
 
-Embedding file is created after the process. Each line in the embedding file contain a word and its vector components, all space seperated.
+Embedding file is created after the process. Each line in the embedding file contain a word and its vector components, all space seperated.<br/>
 eg  the 0.756 2.484 0.0345 ...
 
-to use embedding for downstream task, use read_write.py
+To use embedding for downstream task, use read_write.py
