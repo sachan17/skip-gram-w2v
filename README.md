@@ -19,7 +19,7 @@ w2v_np = model training code
 wordsim.py, ranking.py, read_write = code to calculate correlation coefficient, directly picked up from https://github.com/mfaruqui/eval-word-vectors
 
 Train:
->> python w2v_np.py reuters_processed_train.pkl
+   python w2v_np.py reuters_processed_train.pkl
 
 Embedding file is created after the process. Each line in the embedding file contain a word and its vector components, all space seperated.
 eg  the 0.756 2.484 0.0345 ...
